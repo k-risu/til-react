@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 function CeoPage() {
@@ -5,7 +6,7 @@ function CeoPage() {
     <>
       <Header></Header>
       <main>대표인사말</main>
-      <footer>하단</footer>
+      <Footer></Footer>
     </>
   );
 }
