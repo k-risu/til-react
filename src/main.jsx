@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+
 import "./index.css";
-import Pop from "./components/Pop";
+import IndexPage from "./pages/IndexPage";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Pop></Pop>
+    <IndexPage></IndexPage>
   </StrictMode>,
 );
