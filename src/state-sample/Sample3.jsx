@@ -1,24 +1,44 @@
+import styled from "@emotion/styled";
 import { useState } from "react";
 
-const Sample3 = () => {
-  const [open, setOpen] = useState(false);
+const ModalWinDiv = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+`;
 
-  const openModal = () => {
-    setOpen(true);
+const Sample3 = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const 보이기 = () => {
+    setIsOpen(true);
   };
 
-  const closeModal = () => {
-    setOpen(false);
+  const 숨기기 = () => {
+    setIsOpen(false);
   };
 
   return (
     <div>
-      <button onClick={openModal}>보기</button>
-      {open && (
-        <div>
-          팝업창
-          <button onClick={closeModal}>닫기</button>
-        </div>
+      <button onClick={보이기}>보기</button>
+
+      {isOpen ? (
+        <ModalWinDiv>
+          <button onClick={숨기기}>보이지마</button>
+        </ModalWinDiv>
+      ) : null}
+
+      {isOpen && (
+        <ModalWinDiv>
+          <button onClick={숨기기}>보이지마</button>
+        </ModalWinDiv>
       )}
     </div>
   );

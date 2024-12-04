@@ -12,6 +12,7 @@ const Sample2 = () => {
     height: "100vh",
     display: "flex",
     backgroundColor: isDark ? "#000" : "#fff",
+    transition: "all 0.5s",
   };
 
   return (

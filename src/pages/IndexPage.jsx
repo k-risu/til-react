@@ -5,8 +5,6 @@ import Notice from "../components/notice/Notice";
 import { LinkDiv } from "../styles/components/common/styled-common";
 import "../styles/pages/index-page.css";
 
-// 바로가기 영역의 CSS-in-JS
-
 function IndexPage() {
   return (
     <>
@@ -14,8 +12,8 @@ function IndexPage() {
       <main className="main">
         <div className="slide">슬라이드</div>
         <div className="content">
-          <Notice>공지사항</Notice>
-          <Banner>배너</Banner>
+          <Notice></Notice>
+          <Banner></Banner>
           <LinkDiv bc={"red"} className="link">
             바로가기
           </LinkDiv>
